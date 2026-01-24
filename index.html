@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Panoramic Tour</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="loading-screen">
+            <div class="loader"></div>
+            <p>Loading panorama...</p>
+        </div>
+        
+        <canvas id="canvas"></canvas>
+        
+        <div id="controls">
+            <div class="control-group">
+                <button id="fullscreen-btn" title="Fullscreen">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                    </svg>
+                </button>
+                <button id="zoom-in-btn" title="Zoom In">+</button>
+                <button id="zoom-out-btn" title="Zoom Out">−</button>
+                <button id="info-btn" title="Info">ℹ</button>
+            </div>
+        </div>
+        
+        <div id="scene-list">
+            <h3>Scenes</h3>
+            <div id="scene-buttons"></div>
+        </div>
+        
+        <div id="info-panel" class="hidden">
+            <button id="close-info">×</button>
+            <h2>About This Tour</h2>
+            <p>Navigate through the panoramic scenes by clicking on hotspots or selecting scenes from the menu.</p>
+            <h3>Controls:</h3>
+            <ul>
+                <li><strong>Mouse Drag</strong> - Look around</li>
+                <li><strong>Mouse Wheel</strong> - Zoom in/out</li>
+                <li><strong>Touch Drag</strong> - Look around (mobile)</li>
+                <li><strong>Pinch</strong> - Zoom (mobile)</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script type="module" src="main.js"></script>
+</body>
+</html>
